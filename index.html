@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>My Tech Goals</h1>
+    </div>
+  </header>
+
+  <main>
+    <section id="goals">
+      <div class="container">
+        <h2 style="text-align: center;">Goals Overview</h2>
+        <p>1. Continuously enhance my proficiency in programming languages such as Python, JavaScript
+          , and learning new frameworks like React and Django, also delving into advanced topics such 
+          as design patterns, algorithms, data structures, and optimization techniques.<br>
+          2. Deepen my knowledge of machine learning and artificial intelligence, delving into machine 
+          learning techniques such as deep learning, reinforcement learning, and natural language processing
+           (NLP). I'd like to understand how AI can be applied in different sectors and working hand-in-hand 
+           with AI systems to produce better results.<br>
+          3. Gain hands-on experience by collaborating and working on diverse projects, both personal and 
+          professional and applying theoretical knowledge and solve real-world problems.<br>
+          4. Build a strong professional network, attend industry events, join tech communities, and connect with 
+          like-minded individuals on platforms like GitHub and LinkedIn in a bin to learn, network, and discover 
+          potential career paths.<br>
+          5. Obtain relevant certifications in areas such as cloud computing (AWS, Azure), data science, or 
+          cybersecurity to validate skills and expand career opportunities.<br>
+          6. Improve soft skills such as good communication, teamwork, and leadership abilities through workshops, 
+          courses, and practical experience in collaborative tech projects.<br>
+          7. Stay updated with the latest trends and advancements in technology by regularly reading tech blogs,
+           research papers, and participating in online forums and discussions.<br>
+          8. Work towards securing a role that aligns with my interests and allows for growth in responsibilities 
+          and impact within the tech industry.</p>
+      </div>
+    </section>
+
+    <section id="slack-info" style="background-color:#FFBF69;">
+      <div class="container">
+        <h2 style="text-align: center; font-size: 30px;">About Me</h2>
+        <div>
+          <img src="images/me.png" alt="Slack Profile Picture" data-testid="slackProfilePicture" style="right: 50px;">
+          <h2>I'm <span style="color:#FEEAFA" data-testid="slackDisplayName">Adelosoye Olajumoke</span>
+            , a budding front-end developer with 1
+                year experience in the tech industry. Though fairly new, I’m
+                enthusiastic about exploring new technologies and continually
+                expanding my skill set.
+                I have been able to explore certain aspects of web design and
+                development, and the more I learn, the more I want to know. I
+                recently started an internship with HNG, and it has been
+                incredibly helpful in my journey. The hands-on experience has
+                significantly enhanced my skills and understanding of the field.
+                In my free time, I enjoy working on personal projects that
+                challenge me to apply what I've learned and experiment with new
+                technologies. I'm excited about the future and looking forward to
+                contributing to innovative projects and collaborating with other
+                tech enthusiasts.
+            </h2>
+          <h3 data-testid="slackEmail">olajummybae@yahoo.com</h3>
+          <section id="time">
+            <p data-testid="currentTimeUTC">Current UTC Time: <span id="currentTimeUTC"></span></p>
+            <p data-testid="currentDay">Current Day: <span id="currentDay"></span></p>
+          </section>
+            <script>
+            function updateTime() {
+            const currentTimeUTC = new Date().toISOString().split('T')[1].split('.')[0];
+            document.getElementById('currentTimeUTC').textContent = currentTimeUTC;
+            }
+            function updateDay() {
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const currentDay = days[new Date().getUTCDay()];
+            document.getElementById('currentDay').textContent = currentDay;
+            }
+            updateTime();
+            updateDay();
+            setInterval(updateTime, 1000); // Update time every second
+            </script>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="useful-links">
+      <div class="container">
+        <h2>Useful Links</h2>
+        <ul>
+          <li><a href="https://hng.tech/learn" target="_blank" data-testid="hngLink">hng.tech/learn</a></li>
+          <li><a href="https://keyword.dog" target="_blank" data-testid="keywordLink">keyword.dog</a></li>
+          <li><a href="https://scrapeanyweb.site" target="_blank" data-testid="scrapeanywebLink">scrapeanyweb.site</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Olajumoke</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
